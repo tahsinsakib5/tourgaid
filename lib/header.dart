@@ -28,7 +28,7 @@ class header extends StatelessWidget {
                   "assets/logo.png",
                   height: 60,
                 ),
-                Text("Finix",style:TextStyle(fontSize:30,fontWeight: FontWeight.w700),)
+                Text("Village tour",style:TextStyle(fontSize:30,fontWeight: FontWeight.w700),)
               ],
             ),
           ),
