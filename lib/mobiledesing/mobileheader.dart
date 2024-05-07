@@ -1,10 +1,10 @@
 
-import 'dart:html';
+
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
-import 'package:tourgaid/fotter.dart';
+
 
 
 class mobileheaDER extends StatelessWidget {
@@ -30,6 +30,13 @@ class mobileheaDER extends StatelessWidget {
                 Text("Finix",style:TextStyle(fontSize:18,fontWeight: FontWeight.w700),)
               ],
             ),
+
+
+            Column(
+              children: [
+             
+              ],
+            ),
          Icon(Icons.phone,color: Colors.pink,),
                  SizedBox(
                   width:14,
@@ -39,12 +46,12 @@ class mobileheaDER extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text("call now"),
-                    Text("+01630888045",style:TextStyle(fontSize:15,fontWeight: FontWeight.w700)),
+                    Text("+01630888045",style:TextStyle(fontSize:12,fontWeight: FontWeight.w700)),
                   ],
                 ),
 
                   SizedBox(
-                  width:19,
+                  width:8,
                 ),
 
                  Icon(MdiIcons.gmail,color: Colors.pink,),
@@ -56,9 +63,12 @@ class mobileheaDER extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text("Gmail"),
-                    Text("sakibulislam5162@gmail.com",style:TextStyle(fontSize:13,fontWeight: FontWeight.w700)),
+                    Text("sakibulislam5162@gmail.com",style:TextStyle(fontSize:8,fontWeight: FontWeight.w700)),
                   ],
                 ),
+
+
+                
         ],
       ),
     );

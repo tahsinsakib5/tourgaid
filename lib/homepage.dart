@@ -2,7 +2,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
+
+import 'package:tourgaid/allimage.dart';
 import 'package:tourgaid/fotter.dart';
 import 'package:tourgaid/header.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -19,7 +20,7 @@ class HomePage extends StatelessWidget {
               if (await canLaunch(_call)) {
                 await launch(_call);
               }
-      },child: Icon(MdiIcons.whatsapp,size:38,color: Color.fromARGB(255, 131, 248, 135),),),
+      },child:Image.asset("assets/whatsapp.png"),),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -104,7 +105,7 @@ class HomePage extends StatelessWidget {
                           width:600,
                            child: ClipRRect(
                             borderRadius: BorderRadius.circular(6),
-                            child: Image.asset("assets/image.jpg",fit: BoxFit.cover,)),
+                            child: Image.asset(images[index],fit: BoxFit.cover,)),
                         ),
 
                         Padding(
@@ -133,50 +134,58 @@ class HomePage extends StatelessWidget {
                   ),
 
                   Expanded(
-                    child: Container(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-
-                          MaterialButton(onPressed: () {
-                            
-                          },child:Container(
-                            decoration: BoxDecoration(
-                              color: Colors.pink,
-                              borderRadius: BorderRadius.circular(10)
-                            ),
-                            height:60,
-                            width: 170,
-                            child:Center(child: Text("About us",style:TextStyle(color: Colors.white),)),
-                          ),),
-                          Text("Travelling More Easy With Our Guide\n Team & Our Travel Service Agency",style:TextStyle(fontSize:40, fontWeight:FontWeight.w500),),
-                            SizedBox(
-                              height:55,
-                            ),
-                          Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,\n luctus nec ullamcorper mattis, pulvinar dapibus leo",style:TextStyle(fontSize:20),),
-                           SizedBox(height: 40,),
-                          Container(
-                          decoration: BoxDecoration(
-                            color: Color.fromARGB(238, 238, 238, 239),
-                            
-                          ),
-                          child: Padding(
-                            padding: const EdgeInsets.all(30),
+                    child: Row(
+                      children: [
+                        Container(
+                          child: Expanded(
                             child: Column(
-                              mainAxisAlignment: MainAxisAlignment.start,
                               crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                Text(",,",style: TextStyle(fontSize:100,color: Colors.amber),),
-                                Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.Lorem\n ipsum dolor sit amet consectetur adipiscing elit dolor",style: TextStyle(fontSize:20),),
-                                SizedBox(height:20,),
-                                Text("joah",style:TextStyle(color: Colors.amber),)
+                                                    
+                                MaterialButton(onPressed: () {
+                                  
+                                },child:Container(
+                                  decoration: BoxDecoration(
+                                    color: Colors.pink,
+                                    borderRadius: BorderRadius.circular(10)
+                                  ),
+                                  height:60,
+                                  width: 170,
+                                  child:Center(child: Text("About us",style:TextStyle(color: Colors.white),)),
+                                ),),
+
+                                SizedBox(height:25,),
+                                Text("Travelling More Easy With Our Guide\n Team & Our Travel Service Agency",style:TextStyle(fontSize:40, fontWeight:FontWeight.w500),),
+                                  SizedBox(
+                                    height:20,
+                                  ),
+                                Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,\n luctus nec ullamcorper mattis, pulvinar dapibus leo",style:TextStyle(fontSize:20),),
+                                 SizedBox(height:50,),
+                                Container(
+                                decoration: BoxDecoration(
+                                  color: Color.fromARGB(238, 238, 238, 239),
+                                  
+                                ),
+                                child: Padding(
+                                  padding: const EdgeInsets.all(30),
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Text(",,",style: TextStyle(fontSize:100,color: Colors.amber),),
+                                      Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.Lorem\n ipsum dolor sit amet consectetur adipiscing elit dolor",style: TextStyle(fontSize:20),),
+                                      SizedBox(height:20,),
+                                      Text("joah",style:TextStyle(color: Colors.amber),)
+                                    ],
+                                  ),
+                                ),
+                                )
                               ],
                             ),
                           ),
-                          )
-                        ],
-                      ),
+                        ),
+                      ],
                     ),
                   )
                 ],
@@ -187,87 +196,130 @@ class HomePage extends StatelessWidget {
               height:800,
               child: Row(
                 children: [
-                  
-
                   Expanded(
-                    child: Container(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.end,
-                        mainAxisAlignment: MainAxisAlignment.center,
+                    flex:1,
+                      child: Row(
                         children: [
-
-                          MaterialButton(onPressed: () {
+                          Expanded(
+                            child: Container(
                             
-                          },child:Container(
-                            decoration: BoxDecoration(
-                              color: Colors.pink,
-                              borderRadius: BorderRadius.circular(10)
                             ),
-                            height:60,
-                            width: 170,
-                            child:Center(child: Text("What we Do",style:TextStyle(color: Colors.white),)),
-                          ),),
-                          Text("Travelling More Easy With Our Guide\n Team & Our Travel Service Agency",style:TextStyle(fontSize:40, fontWeight:FontWeight.w500),),
-                            SizedBox(
-                              height:55,
-                            ),
-                          Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,\n luctus nec ullamcorper mattis, pulvinar dapibus leo",style:TextStyle(fontSize:20),),
-                           SizedBox(height: 40,),
-                           
-                           Column(
-                            children: [
-                              Row(children: [
-                                Icon(Icons.person,color: Colors.pink,size: 40,),
-                                Text("Completed Training Guide",style: TextStyle(fontSize:24),)
-                              ],),
-                              Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,\n luctus nec ullamcorper mattis, pulvinar dapibus leo.")
-                            ],
-                           ),
-
-                           Column(
-                            crossAxisAlignment: CrossAxisAlignment.end,
-                            children: [
-                              Row(
-                               
-                                children: [
-                                Icon(Icons.admin_panel_settings,color: Colors.pink,size:40,),
-                                Text("Completed Training Guide",style: TextStyle(fontSize:24),)
-                              ],),
-                              Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,\n luctus nec ullamcorper mattis, pulvinar dapibus leo.")
-                            ],
-                           ),
-
-                         Row(
-                          children: [
-                    
-
-                          Container(
-                            decoration: BoxDecoration(
-                              color: Colors.pink,
-                              borderRadius: BorderRadius.circular(6)
-                            ),
-                            height:60,
-                            width: 170,
-                            child:Center(child: Text("What we Do",style:TextStyle(color: Colors.white,fontSize:17),)),
                           ),
+                          
+                          Expanded(
+                            flex:3,
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                            
+                                MaterialButton(onPressed: () {
+                                  
+                                },child:Container(
+                                  decoration: BoxDecoration(
+                                    color: Colors.pink,
+                                    borderRadius: BorderRadius.circular(10)
+                                  ),
+                                  height:60,
+                                  width: 170,
+                                  child:Center(child: Text("What we Do",style:TextStyle(color: Colors.white),)),
 
 
-                          Row(
-                            children: [
+                                ),),
 
-                              IconButton(onPressed: () {
-                                
-                              }, icon:Icon(Icons.play_arrow_sharp,color: Colors.pink,size:40,)),
+                                SizedBox(
+                                  height:30,
+                                ),
+                                Text("Travelling More Easy With Our Guide\n Team & Our Travel Service Agency",style:TextStyle(fontSize:40, fontWeight:FontWeight.w500),),
+                                  SizedBox(
+                                    height:18,
+                                  ),
+                                const Row(
+                                  children: [
+                                    Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,\n luctus nec ullamcorper mattis, pulvinar dapibus leo",style:TextStyle(fontSize:20),),
+                                  ],
+                                ),
+                                 SizedBox(height:30,),
+                                 
+                                 const Column(
+                                  children: [
+                                    Row(children: [
+                                      Icon(Icons.person,color: Colors.pink,size: 40,),
+                                      Text("Completed Training Guide",style: TextStyle(fontSize:24),)
+                                    ],),
 
-                              Text("video play",style:TextStyle(fontSize:18),)
-                            ],
-                          )
-                          ],
-                         )  
+                                    
+                                    Row(
+                                      children: [
+                                      SizedBox(
+                                        width:35,
+                                      ),  Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,\n luctus nec ullamcorper mattis, pulvinar dapibus leo.",style: TextStyle(fontSize:20),),
+                                      ],
+                                    )
+                                  ],
+                                 ),
+                                   SizedBox(
+                                    height:20,
+                                   ),
+                                 const Column(
+                                  crossAxisAlignment: CrossAxisAlignment.end,
+                                  children: [
+                                    Row(
+                                     
+                                      children: [
+                                      Icon(Icons.admin_panel_settings,color: Colors.pink,size:40,),
+                                      Text("Completed Training Guide",style: TextStyle(fontSize:24),)
+                                    ],),
+                                    Row(
+                                      children: [
+                                       SizedBox(
+                                        width:35,
+                                       ), Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,\n luctus nec ullamcorper mattis, pulvinar dapibus leo.",style:TextStyle(fontSize:17),),
+                                      ],
+                                    )
+                                  ],
+                                 ),
+
+                                 SizedBox(
+                                      height: 20,
+                                    ),
+                            
+                               Row(
+                                children: [
+                                                
+                            
+                                Container(
+                                  decoration: BoxDecoration(
+                                    color: Colors.pink,
+                                    borderRadius: BorderRadius.circular(6)
+                                  ),
+                                  height:60,
+                                  width: 170,
+                                  child:Center(child: Text("What we Do",style:TextStyle(color: Colors.white,fontSize:17),)),
+                                ),
+                            
+                            
+                                Row(
+                                  children: [
+                            
+                                    IconButton(onPressed: () {
+                                      
+                                    }, icon:Icon(Icons.play_arrow_sharp,color: Colors.pink,size:40,)),
+                            
+                                    Text("video play",style:TextStyle(fontSize:18),)
+                                  ],
+                                )
+                                ],
+                               )  
+                              ],
+                            ),
+                          ),
                         ],
                       ),
-                    ),
+                    
                   ),
+
+                  Container(),
 
                   Expanded(
                     child: Container(
@@ -278,7 +330,7 @@ class HomePage extends StatelessWidget {
               ),
             ),
         
-            containers()
+            fotter()
           ],
         ),
       ),
