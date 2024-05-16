@@ -1,14 +1,14 @@
 
 
-// import 'dart:ui';
+import 'dart:ui';
 
-// import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 
-// class MyCustomScrollBehavior extends MaterialScrollBehavior {
+class MyCustomScrollBehavior extends MaterialScrollBehavior {
  
-//   @override
-//   Set<PointerDeviceKind> get dragDevices => {
-//         PointerDeviceKind.touch,
-//         PointerDeviceKind.mouse,
-//       };
-// }
+  @override
+  Set<PointerDeviceKind> get dragDevices => {
+        PointerDeviceKind.touch,
+        PointerDeviceKind.mouse,
+      };
+}
